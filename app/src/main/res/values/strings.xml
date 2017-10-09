@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">NameMangler</string>
+    <string name="app_name">Name Mangler</string>
+    <string name="first_name">First Name:</string>
+    <string name="mangle_button">Mangle!</string>
+    <string name="error_message">Input field must be filled in</string>
+
+
 </resources>
