@@ -20,17 +20,16 @@ public class MainActivity extends AppCompatActivity {
 
         mButton = (Button) findViewById(R.id.button);
         mEditText = (EditText) findViewById(R.id.name_text);
-        mEditText.setText("First");
+        //mEditText.setText("First");
 
         mButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v){
                 if(TextUtils.isEmpty(mEditText.getText().toString())) {
                     Toast.makeText(MainActivity.this, "Input Field Must Be Filled In", Toast.LENGTH_SHORT).show();
                 } else{
-                    String pass = mEditText.getText().toString();
-                    Toast.makeText(MainActivity.this, "Input Filled In", Toast.LENGTH_SHORT).show();
-
+                    //Toast.makeText(MainActivity.this, "Input Filled In", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent (MainActivity.this, MangledName.class);
+                    String pass = mEditText.getText().toString();
                     intent.putExtra("firstName", pass);
                     startActivity(intent);
                 }

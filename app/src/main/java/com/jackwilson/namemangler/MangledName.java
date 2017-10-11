@@ -26,13 +26,12 @@ public class MangledName extends AppCompatActivity {
         Intent myIntent = getIntent();
         String pass = myIntent.getStringExtra("firstName");
 
-        //Toast.makeText(MangledName.this, pass, Toast.LENGTH_SHORT).show();
+        Toast.makeText(MangledName.this, pass, Toast.LENGTH_SHORT).show();
         mTextView = (TextView) findViewById(R.id.answer);
-        int random = new Random().nextInt(0) + lastNameArray.length-1;
-        mTextView.setText(pass+lastNameArray[random]);
+        //int random = new Random().nextInt(0) + lastNameArray.length-1;
+        mTextView.setText(pass + lastNameArray[1]);//Use string resource???
 
-
-        mResetButton = (Button) findViewById(R.id.button2);
+        mResetButton = (Button) findViewById(R.id.button2);//Issue, loop of activities
         mResetButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v){
                     Intent intent = new Intent (MangledName.this, MainActivity.class);
@@ -40,7 +39,7 @@ public class MangledName extends AppCompatActivity {
             }
         });
 
-        mReMangleButton = (Button) findViewById(R.id.button1);
+        mReMangleButton = (Button) findViewById(R.id.button1);//Clears to null
         mReMangleButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v){
                 Intent intent = new Intent (MangledName.this, MangledName.class);
